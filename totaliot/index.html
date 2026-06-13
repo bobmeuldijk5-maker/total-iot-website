@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total IoT — IoT-oplossingen op maat | Smart Building, Energy, Water & Industry</title>
+<meta name="description" content="Total IoT bouwt IoT-oplossingen op maat. Van sensoren en connectiviteit tot dashboards en automatisering — advies en realisatie voor smart building, energy, water en industry in Nederland.">
+<meta name="keywords" content="IoT, LoRaWAN, smart building, smart energy, sensoren, dashboards, IoT consultancy, Nederland">
+<meta property="og:title" content="Total IoT — IoT-oplossingen op maat">
+<meta property="og:description" content="Van losse bouwblokken naar werkende IoT-oplossingen. Smart building, energy, water en industry.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://totaliot.nl/">
+<meta property="og:locale" content="nl_NL">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://totaliot.nl/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon-512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Total IoT",
+  "description": "IoT-oplossingen op maat: advies, integratie en realisatie van sensoren, LoRaWAN, cellular, data-ontsluiting, dashboards en automatisering.",
+  "url": "https://totaliot.nl",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nederland"
+  },
+  "knowsAbout": ["IoT", "LoRaWAN", "Smart Building", "Smart Energy", "Smart Water", "Sensor Integration", "Data Visualization", "API Integration"]
+}
+</script>
+
+<style>
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F6F8FB;
+  --bg-tint: #FAFBFD;
+  /* Total IoT huisstijl — afgeleid uit het logo */
+  --navy: #195C81;
+  --navy-mid: #1672A2;
+  --navy-light: #5A6B78;
+  --orange: #F19D38;
+  --orange-soft: #FDF1E0;
+  --green: #64AE68;
+  --teal: #479290;
+  --cyan: #1E93BB;
+  --text: #0F2D43;
+  --text-muted: #5A6B78;
+  --border: #DCE6EC;
+  --border-strong: #C2D2DC;
+  --brand-gradient: linear-gradient(135deg, #0F2D43 0%, #195C81 42%, #479290 74%, #64AE68 100%);
+  --shadow-sm: 0 1px 2px rgba(15, 45, 67, 0.04), 0 2px 8px rgba(15, 45, 67, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 45, 67, 0.06), 0 12px 32px rgba(15, 45, 67, 0.05);
+  --shadow-lg: 0 12px 28px rgba(15, 45, 67, 0.08), 0 32px 64px rgba(15, 45, 67, 0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--orange); color: white; }
+
+a { color: var(--navy); text-decoration: none; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* HEADER */
+header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--orange);
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--navy); }
+
+/* HERO */
+.hero {
+  padding: 84px 0 96px;
+  position: relative;
+  overflow: hidden;
+  background: var(--brand-gradient);
+  color: #fff;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 85% 20%, rgba(255,255,255,0.10), transparent 60%);
+  pointer-events: none;
+}
+.hero .container { position: relative; z-index: 1; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin-bottom: 28px;
+  font-variation-settings: "opsz" 80;
+}
+
+.hero h1 .accent {
+  color: var(--orange);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero p.lead {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.cta-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(241, 157, 56, 0.28);
+}
+
+.btn-primary:hover {
+  background: #D9842A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(241, 157, 56, 0.34);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--border-strong);
+}
+
+.btn-secondary:hover {
+  border-color: var(--navy);
+  background: var(--bg-soft);
+}
+
+.hero .btn-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.hero .btn-secondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn .arrow { transition: transform 0.2s ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+  aspect-ratio: 1;
+  max-width: 480px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-logo-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 44px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-logo-card img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
+
+.network-svg { width: 100%; height: 100%; }
+.network-svg .line { stroke: var(--border-strong); stroke-width: 1; fill: none; }
+.network-svg .node { fill: var(--navy); }
+.network-svg .node-accent { fill: var(--orange); }
+.hero .network-svg .line { stroke: rgba(255, 255, 255, 0.4); }
+.hero .network-svg .node { fill: #fff; }
+.hero .network-svg .node-accent { fill: var(--orange); }
+.network-svg .pulse-ring {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-origin: center;
+  animation: pulseRing 3s ease-out infinite;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.5); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* SECTIONS */
+section { padding: 100px 0; position: relative; }
+section.alt { background: var(--bg-soft); }
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-bottom: 20px;
+  max-width: 720px;
+  font-variation-settings: "opsz" 60;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--orange);
+  font-weight: 400;
+}
+
+.section-intro {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin-bottom: 56px;
+  line-height: 1.65;
+}
+
+/* SEGMENTS */
+.segments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.segment-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.segment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.segment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--orange);
+  transition: width 0.3s ease;
+}
+
+.segment-card:hover::before { width: 100%; }
+
+.segment-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  background: var(--orange-soft);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segment-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--orange);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.segment-card h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.segment-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* BOUWBLOKKEN */
+.blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.block-item {
+  background: white;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background 0.2s ease;
+}
+
+.block-item:hover { background: var(--bg-tint); }
+
+.block-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.block-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--navy);
+  stroke-width: 1.7;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.block-item h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--navy);
+  letter-spacing: -0.005em;
+}
+
+.block-item p {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* APPROACH */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.approach-step {
+  position: relative;
+  padding-top: 24px;
+  border-top: 2px solid var(--navy);
+}
+
+.approach-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.approach-step h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.approach-step p {
+  color: var(--text-muted);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-text strong {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* CONTACT */
+.contact {
+  background: var(--navy);
+  color: white;
+  padding: 110px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 20px;
+  color: white;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-variation-settings: "opsz" 80;
+}
+
+.contact h2 .accent {
+  color: var(--orange);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact p.lead {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+
+.contact .btn-primary {
+  background: var(--orange);
+  color: white;
+  font-size: 16px;
+  padding: 16px 28px;
+}
+
+.contact .btn-primary:hover { background: #F08A3A; }
+
+.contact-meta {
+  margin-top: 32px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* FOOTER */
+footer {
+  background: #0F2D43;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 32px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer .logo {
+  color: white;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { max-width: 360px; margin: 0 auto; }
+  .segments-grid { grid-template-columns: repeat(2, 1fr); }
+  .blocks-grid { grid-template-columns: repeat(2, 1fr); }
+  .approach-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  nav ul { display: none; }
+  .hero { padding: 60px 0 70px; }
+  section { padding: 70px 0; }
+  .segments-grid, .blocks-grid { grid-template-columns: 1fr; }
+  .blocks-grid { border-radius: 14px; }
+  .contact { padding: 80px 0; }
+  .cta-group { flex-direction: column; align-items: stretch; }
+  .btn { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="/" class="logo" aria-label="Total IoT homepage">
+      <img src="/logo.png" alt="Total IoT" class="logo-img">
+    </a>
+    <nav aria-label="Hoofdnavigatie">
+      <ul>
+        <li><a href="#segmenten">Segmenten</a></li>
+        <li><a href="#bouwblokken">Bouwblokken</a></li>
+        <li><a href="#aanpak">Aanpak</a></li>
+        <li><a href="#over">Over</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>De juiste IoT-oplossing, <span class="accent">op maat samengesteld</span>.</h1>
+        <p class="lead">
+          Total IoT helpt organisaties van advies tot realisatie. Sensoren, connectiviteit, data-ontsluiting en visualisatie — als bouwblokken voor de oplossing die past bij jouw vraagstuk.
+        </p>
+        <div class="cta-group">
+          <a href="#contact" class="btn btn-primary">
+            Plan een vrijblijvend gesprek
+            <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#segmenten" class="btn btn-secondary">Bekijk segmenten</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-card">
+          <img src="/logo.png" alt="Total IoT — Complete IoT Solutions">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="segmenten">
+  <div class="container">
+    <span class="section-eyebrow">Segmenten</span>
+    <h2 class="section-title">Voor welke <em>vraagstukken</em>.</h2>
+    <p class="section-intro">
+      Sectoren waar IoT directe waarde toevoegt — door comfort, efficiëntie, inzicht of duurzaamheid meetbaar te maken.
+    </p>
+    <div class="segments-grid">
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg>
+        </div>
+        <h3>Smart Building</h3>
+        <p>Comfort, luchtkwaliteit, bezetting en energieverbruik in kantoren, scholen en zorginstellingen — zichtbaar maken en sturen.</p>
+      </article>
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Smart Energy</h3>
+        <p>Monitoring en sturing van energiestromen, kWh-meters, accusystemen en laadinfrastructuur. Inzicht waar het kantelpunt zit.</p>
+      </article>
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2v6m0 0c-3 0-7 2-7 7s4 7 7 7 7-2 7-7-4-7-7-7zm-3 9h6"/></svg>
+        </div>
+        <h3>Smart Water</h3>
+        <p>Peil-, flow- en kwaliteitsmetingen voor waterschappen, beheerders en gemeenten. Van losse sensor tot dashboard met alarmering.</p>
+      </article>
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l4-3 4 3v11M13 21V14h6v7M9 13h.01M9 17h.01"/></svg>
+        </div>
+        <h3>Smart Industry</h3>
+        <p>Modbus, OPC-UA en industriële sensoren in productie, utiliteit en gebouwbeheer. Retrofitting van bestaande installaties.</p>
+      </article>
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 00-8-8z"/></svg>
+        </div>
+        <h3>Smart Asset Tracking</h3>
+        <p>Locatie- en conditiebewaking van mobiele assets — voertuigen, containers, gereedschap. Cellular of LoRa, afhankelijk van wat past.</p>
+      </article>
+
+      <article class="segment-card">
+        <div class="segment-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Maatwerk</h3>
+        <p>Past je vraagstuk niet in een hokje? Vaak het interessantst. Vertel wat je wilt bereiken, dan kijken we welke bouwblokken passen.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="bouwblokken">
+  <div class="container">
+    <span class="section-eyebrow">Bouwblokken</span>
+    <h2 class="section-title">Waaruit een oplossing <em>opgebouwd</em> wordt.</h2>
+    <p class="section-intro">
+      Elk IoT-traject combineert dezelfde grondbeginselen in een andere verhouding. Dit zijn de blokken waarmee ik werk.
+    </p>
+
+    <div class="blocks-grid">
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><path d="M8 12h16M8 16h16M8 20h10M22 6l4 4-4 4M26 22l-4 4 4 4" /></svg>
+        </div>
+        <h3>Data-ontsluiting</h3>
+        <p>API-integraties of retrofitting van bestaande systemen. Sensors, machines of legacy-installaties aansluiten op een moderne datastroom.</p>
+      </div>
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="3"/><path d="M9 9c4-4 10-4 14 0M11 11c3-3 7-3 10 0M23 23c-4 4-10 4-14 0M21 21c-3 3-7 3-10 0"/></svg>
+        </div>
+        <h3>Sensoren</h3>
+        <p>Selectie, plaatsing en configuratie van LoRa- en cellular-sensoren — van temperatuur en CO₂ tot energie, peil en bezetting.</p>
+      </div>
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><path d="M16 22v6M11 28h10M6 16c0-5 4-10 10-10s10 5 10 10M10 16c0-3 3-6 6-6s6 3 6 6"/></svg>
+        </div>
+        <h3>LoRaWAN</h3>
+        <p>Site surveys, gateway-deployment en payload-decoding. Eigen netwerk of via TTN, KPN Things of een vergelijkbaar platform.</p>
+      </div>
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><path d="M4 24h4v4H4zM10 18h4v10h-4zM16 12h4v16h-4zM22 6h4v22h-4z"/></svg>
+        </div>
+        <h3>Cellular (4G/5G/NB-IoT)</h3>
+        <p>Industriële routers, VPN-tunnels, remote management. Voor situaties waarin LoRa niet past — bandbreedte, locatie of robuustheid.</p>
+      </div>
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="2"/><path d="M4 12h24M12 28V12M20 28V12"/></svg>
+        </div>
+        <h3>Data-visualisatie</h3>
+        <p>Dashboards op maat — niet de zoveelste Grafana-screenshot, maar een interface die past bij hoe jouw team beslissingen neemt.</p>
+      </div>
+
+      <div class="block-item">
+        <div class="block-icon">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="3"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M7.5 24.5l2.8-2.8M21.7 10.3l2.8-2.8"/></svg>
+        </div>
+        <h3>Automatisering</h3>
+        <p>Triggers, alerts en business rules — zodat data niet stilstaat in een dashboard maar leidt tot actie, melding of besturing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="aanpak">
+  <div class="container">
+    <span class="section-eyebrow">Aanpak</span>
+    <h2 class="section-title">Advies op drie <em>dimensies</em>.</h2>
+    <p class="section-intro">
+      Een goede IoT-oplossing klopt technisch, klopt operationeel en klopt zakelijk. Op alle drie de dimensies denken we mee.
+    </p>
+
+    <div class="approach-grid">
+
+      <div class="approach-step">
+        <div class="approach-num">01</div>
+        <h3>Technisch advies</h3>
+        <p>Welke sensoren, welke connectiviteit, welke architectuur? Onafhankelijk advies zonder gebonden te zijn aan één merk of platform — gebaseerd op wat in de praktijk werkt.</p>
+      </div>
+
+      <div class="approach-step">
+        <div class="approach-num">02</div>
+        <h3>Product &amp; lifecycle</h3>
+        <p>Een sensor is geen eenmalige aankoop. Batterijlevensduur, firmware-updates, vervangcycli en supportkanalen tellen mee — over vijf jaar, niet over vijf weken.</p>
+      </div>
+
+      <div class="approach-step">
+        <div class="approach-num">03</div>
+        <h3>Business case</h3>
+        <p>Wat kost het, wat levert het op, en wanneer is het terugverdiend? Een eerlijke rekensom voordat er sensoren besteld worden — en bijgesteld terwijl het project loopt.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="over">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="section-eyebrow">Over Total IoT</span>
+        <h2 class="section-title">Klein, maar volledig <em>end-to-end</em>.</h2>
+      </div>
+      <div class="about-text">
+        <p>
+          Total IoT is een onafhankelijke IoT-praktijk in Nederland. Geen partij die alleen hardware verkoopt of alleen dashboards bouwt — maar één aanspreekpunt voor het hele traject: <strong>van de eerste sensor tot het eindresultaat in een rapport of dashboard</strong>.
+        </p>
+        <p>
+          Werkt zelfstandig en daardoor wendbaar: korte lijnen, geen overhead, en de vrijheid om de hardware en het platform te kiezen die echt het beste passen. Voor projecten die groter worden, gebeurt dat in samenwerking met vaste partners.
+        </p>
+        <p>
+          Klanten variëren van waterschappen tot vastgoedbeheerders tot industriële installateurs. De gemeenschappelijke factor: ze willen iets meten of sturen wat nu nog niet zichtbaar is.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Een vraagstuk dat zich <span class="accent">laat meten</span>?</h2>
+    <p class="lead">
+      Of je nu een concreet plan hebt of nog aan het verkennen bent — een eerste gesprek is altijd vrijblijvend.
+    </p>
+    <a href="mailto:info@totaliot.nl" class="btn btn-primary">
+      info@totaliot.nl
+      <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
+    <p class="contact-meta">Of bel direct — gegevens op aanvraag.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <a href="/" class="logo">Total IoT<span class="logo-dot" aria-hidden="true"></span></a>
+    <div>© 2026 Total IoT · IoT-oplossingen op maat · Nederland</div>
+  </div>
+</footer>
+
+</body>
+</html>
