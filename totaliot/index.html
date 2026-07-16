@@ -5,21 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Total IoT — IoT-oplossingen op maat | Smart Building, Energy, Water & Industry</title>
 <meta name="description" content="Total IoT bouwt IoT-oplossingen op maat. Van sensoren en connectiviteit tot dashboards en automatisering — advies en realisatie voor smart building, energy, water en industry in Nederland.">
-<meta name="keywords" content="IoT, LoRaWAN, smart building, smart energy, sensoren, dashboards, IoT consultancy, Nederland">
+
 <meta property="og:title" content="Total IoT — IoT-oplossingen op maat">
 <meta property="og:description" content="Van losse bouwblokken naar werkende IoT-oplossingen. Smart building, energy, water en industry.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://totaliot.nl/">
 <meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://totaliot.nl/logo.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://totaliot.nl/">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="alternate icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+<link rel="apple-touch-icon" href="/beeldmerk.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -28,6 +29,7 @@
   "name": "Total IoT",
   "description": "IoT-oplossingen op maat: advies, integratie en realisatie van sensoren, LoRaWAN, cellular, data-ontsluiting, dashboards en automatisering.",
   "url": "https://totaliot.nl",
+  "logo": "https://totaliot.nl/logo.png",
   "areaServed": {
     "@type": "Country",
     "name": "Nederland"
@@ -38,625 +40,189 @@
 
 <style>
 :root {
-  --bg: #FFFFFF;
-  --bg-soft: #F6F8FB;
-  --bg-tint: #FAFBFD;
-  /* Total IoT huisstijl — afgeleid uit het logo */
-  --navy: #195C81;
-  --navy-mid: #1672A2;
-  --navy-light: #5A6B78;
-  --orange: #F19D38;
-  --orange-soft: #FDF1E0;
-  --green: #64AE68;
-  --teal: #479290;
-  --cyan: #1E93BB;
-  --text: #0F2D43;
-  --text-muted: #5A6B78;
-  --border: #DCE6EC;
-  --border-strong: #C2D2DC;
-  --brand-gradient: linear-gradient(135deg, #0F2D43 0%, #195C81 42%, #479290 74%, #64AE68 100%);
-  --shadow-sm: 0 1px 2px rgba(15, 45, 67, 0.04), 0 2px 8px rgba(15, 45, 67, 0.04);
-  --shadow-md: 0 4px 12px rgba(15, 45, 67, 0.06), 0 12px 32px rgba(15, 45, 67, 0.05);
-  --shadow-lg: 0 12px 28px rgba(15, 45, 67, 0.08), 0 32px 64px rgba(15, 45, 67, 0.06);
+  /* Total IoT huisstijl — premium, rustig, betrouwbaar */
+  --navy: #293243;
+  --navy-dark: #1F2836;
+  --green: #4E8359;
+  --green-light: #669571;
+  --offwhite: #F7F8F7;
+  --border: #CAD2D0;
+  --white: #FFFFFF;
+  --text: #293243;
+  --muted: #6B7680;
+  --shadow-sm: 0 1px 2px rgba(31, 40, 54, .04), 0 2px 8px rgba(31, 40, 54, .04);
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
-
 body {
-  background: var(--bg);
+  font-family: 'Inter', sans-serif;
   color: var(--text);
-  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-::selection { background: var(--orange); color: white; }
-
-a { color: var(--navy); text-decoration: none; }
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--orange);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-img, svg { max-width: 100%; display: block; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* HEADER */
-header {
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-.logo {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 22px;
-  color: var(--navy);
-  letter-spacing: -0.02em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.logo-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--orange);
-  border-radius: 50%;
-  position: relative;
-  top: -2px;
-}
-
-nav ul {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-}
-
-nav a {
-  color: var(--text-muted);
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-nav a:hover { color: var(--navy); }
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-.nav-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: var(--navy);
-  color: #fff;
-  padding: 9px 17px;
-  border-radius: 8px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.nav-cta:hover {
-  background: var(--navy-mid);
-  color: #fff;
-  transform: translateY(-1px);
-}
-.nav-cta .arrow { transition: transform 0.2s ease; }
-.nav-cta:hover .arrow { transform: translateX(2px); }
-
-/* HERO */
-.hero {
-  padding: 84px 0 96px;
-  position: relative;
-  overflow: hidden;
-  background: var(--brand-gradient);
-  color: #fff;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(120% 90% at 85% 20%, rgba(255,255,255,0.10), transparent 60%);
-  pointer-events: none;
-}
-.hero .container { position: relative; z-index: 1; }
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.hero h1 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: clamp(40px, 5.5vw, 68px);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: #fff;
-  margin-bottom: 28px;
-  font-variation-settings: "opsz" 80;
-}
-
-.hero h1 .accent {
-  color: var(--orange);
-  font-style: italic;
-  font-weight: 400;
-}
-
-.hero p.lead {
-  font-size: 19px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  margin-bottom: 36px;
-  max-width: 520px;
-}
-
-.cta-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 24px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  border: 1.5px solid transparent;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: var(--orange);
-  color: var(--text);
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(241, 157, 56, 0.28);
-}
-
-.btn-primary:hover {
-  background: #D9842A;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(241, 157, 56, 0.34);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--navy);
-  border-color: var(--border-strong);
-}
-
-.btn-secondary:hover {
-  border-color: var(--navy);
-  background: var(--bg-soft);
-}
-
-.hero .btn-secondary {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.hero .btn-secondary:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.btn .arrow { transition: transform 0.2s ease; }
-.btn:hover .arrow { transform: translateX(3px); }
-
-/* Hero visual */
-.hero-visual {
-  position: relative;
-  aspect-ratio: 1;
-  max-width: 480px;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-logo-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 40px 44px;
-  box-shadow: var(--shadow-lg);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-logo-card img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  display: block;
-}
-
-.network-svg { width: 100%; height: 100%; }
-.network-svg .line { stroke: var(--border-strong); stroke-width: 1; fill: none; }
-.network-svg .node { fill: var(--navy); }
-.network-svg .node-accent { fill: var(--orange); }
-.hero .network-svg .line { stroke: rgba(255, 255, 255, 0.4); }
-.hero .network-svg .node { fill: #fff; }
-.hero .network-svg .node-accent { fill: var(--orange); }
-.network-svg .pulse-ring {
-  fill: none;
-  stroke: var(--orange);
-  stroke-width: 1.5;
-  opacity: 0;
-  transform-origin: center;
-  animation: pulseRing 3s ease-out infinite;
-}
-
-@keyframes pulseRing {
-  0% { transform: scale(0.5); opacity: 0; }
-  20% { opacity: 0.7; }
-  100% { transform: scale(2.4); opacity: 0; }
-}
-
-/* SECTIONS */
-section { padding: 100px 0; position: relative; }
-section.alt { background: var(--bg-soft); }
-
-.section-eyebrow {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--orange);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--navy);
-  margin-bottom: 20px;
-  max-width: 720px;
-  font-variation-settings: "opsz" 60;
-}
-
-.section-title em {
-  font-style: italic;
-  color: var(--orange);
-  font-weight: 400;
-}
-
-.section-intro {
-  font-size: 18px;
-  color: var(--text-muted);
-  max-width: 640px;
-  margin-bottom: 56px;
+  background: var(--offwhite);
   line-height: 1.65;
-}
-
-/* SEGMENTS */
-.segments-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.segment-card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 32px;
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.segment-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
-}
-
-.segment-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: var(--orange);
-  transition: width 0.3s ease;
-}
-
-.segment-card:hover::before { width: 100%; }
-
-.segment-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 20px;
-  background: var(--orange-soft);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.segment-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--orange);
-  stroke-width: 2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.segment-card h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 24px;
-  color: var(--navy);
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-.segment-card p {
-  color: var(--text-muted);
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-/* BOUWBLOKKEN */
-.blocks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.block-item {
-  background: white;
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: background 0.2s ease;
-}
-
-.block-item:hover { background: var(--bg-tint); }
-
-.block-icon {
-  width: 36px;
-  height: 36px;
-}
-
-.block-icon svg {
-  width: 100%;
-  height: 100%;
-  stroke: var(--navy);
-  stroke-width: 1.7;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.block-item h3 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: var(--navy);
-  letter-spacing: -0.005em;
-}
-
-.block-item p {
-  color: var(--text-muted);
-  font-size: 14.5px;
-  line-height: 1.6;
-}
-
-/* APPROACH */
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.approach-step {
-  position: relative;
-  padding-top: 24px;
-  border-top: 2px solid var(--navy);
-}
-
-.approach-num {
-  font-family: 'Fraunces', serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 18px;
-  color: var(--orange);
-  margin-bottom: 12px;
-}
-
-.approach-step h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 26px;
-  color: var(--navy);
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
-}
-
-.approach-step p {
-  color: var(--text-muted);
   font-size: 15.5px;
-  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
+h1, h2, h3 { font-family: 'Manrope', sans-serif; letter-spacing: -.03em; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+img { max-width: 100%; }
+a { color: var(--green); }
 
-/* ABOUT */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: start;
+/* ---------- header ---------- */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
 }
-
-.about-text p {
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--text);
-  margin-bottom: 20px;
+header .container { display: flex; align-items: center; gap: 30px; padding-top: 14px; padding-bottom: 14px; }
+.logo-link { display: inline-flex; align-items: center; }
+.logo-img { height: 42px; width: auto; display: block; }
+.header-right { display: flex; align-items: center; gap: 26px; margin-left: auto; }
+header nav ul { display: flex; gap: 26px; list-style: none; padding: 0; }
+header nav a {
+  color: var(--text); text-decoration: none; font-size: 14.5px; font-weight: 500;
+  transition: color .18s ease;
 }
-
-.about-text p:last-child { margin-bottom: 0; }
-
-.about-text strong {
-  font-weight: 600;
-  color: var(--navy);
+header nav a:hover { color: var(--green); }
+.nav-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 14px;
+  color: var(--green); text-decoration: none;
+  border: 1.5px solid var(--green); border-radius: 8px; padding: 9px 15px;
+  transition: background .18s ease, color .18s ease;
 }
+.nav-cta:hover { background: var(--green); color: var(--white); }
 
-/* CONTACT */
-.contact {
-  background: var(--navy);
-  color: white;
-  padding: 110px 0;
-  text-align: center;
+/* ---------- knoppen ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 14.5px;
+  border: none; border-radius: 8px; padding: 13px 24px; cursor: pointer;
+  text-decoration: none; transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
+.btn-primary { background: var(--green); color: var(--white); }
+.btn-primary:hover { background: var(--navy); color: var(--white); }
+.btn-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+.btn-secondary:hover { border-color: var(--navy); }
 
-.contact h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: clamp(34px, 5vw, 56px);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  margin-bottom: 20px;
-  color: white;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  font-variation-settings: "opsz" 80;
+/* ---------- hero ---------- */
+.hero { background: var(--white); padding: 96px 0 104px; }
+.hero-grid { display: flex; gap: 72px; align-items: center; }
+.hero-text { flex: 1.25; }
+.payoff {
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 13px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin-bottom: 20px;
 }
+h1 { font-weight: 700; font-size: clamp(34px, 4vw, 52px); line-height: 1.12; }
+h1 .accent { color: var(--green); }
+.hero .lead { color: var(--muted); max-width: 33em; margin: 22px 0 32px; font-size: 16.5px; }
+.cta-group { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-visual { flex: 1; display: flex; justify-content: center; }
+.hero-visual img { width: min(280px, 80%); height: auto; }
 
-.contact h2 .accent {
-  color: var(--orange);
-  font-style: italic;
-  font-weight: 400;
+/* ---------- secties ---------- */
+section { padding: 88px 0; }
+section.alt { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section-eyebrow {
+  display: block; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 12.5px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin-bottom: 14px;
 }
+.section-title { font-weight: 700; font-size: clamp(26px, 2.8vw, 36px); margin-bottom: 14px; }
+.section-title em { font-style: normal; color: var(--green); }
+.section-intro { color: var(--muted); max-width: 40em; margin-bottom: 44px; }
 
-.contact p.lead {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.75);
-  max-width: 520px;
-  margin: 0 auto 40px;
-  line-height: 1.65;
+/* ---------- segmenten ---------- */
+.segments-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.segment-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px;
+  transition: border-color .18s ease, transform .18s ease;
 }
+section.alt .segment-card { background: var(--offwhite); }
+.segment-card:hover { border-color: var(--green); transform: translateY(-2px); }
+.segment-icon { width: 38px; height: 38px; margin-bottom: 16px; color: var(--green); }
+.segment-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.segment-card h3 { font-weight: 700; font-size: 17.5px; margin-bottom: 8px; }
+.segment-card p { color: var(--muted); font-size: 14px; }
 
-.contact .btn-primary {
-  background: var(--orange);
-  color: white;
-  font-size: 16px;
-  padding: 16px 28px;
+/* ---------- bouwblokken ---------- */
+.blocks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.block-item {
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px;
+  transition: border-color .18s ease, transform .18s ease;
 }
+.block-item:hover { border-color: var(--green); transform: translateY(-2px); }
+.block-icon { width: 40px; height: 40px; margin-bottom: 16px; color: var(--navy); }
+.block-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.block-item h3 { font-weight: 700; font-size: 17px; margin-bottom: 8px; }
+.block-item p { color: var(--muted); font-size: 14px; }
 
-.contact .btn-primary:hover { background: #F08A3A; }
-
-.contact-meta {
-  margin-top: 32px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.55);
+/* ---------- aanpak ---------- */
+.approach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 36px; }
+.approach-num {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px;
+  color: var(--green); margin-bottom: 10px;
 }
+.approach-step h3 { font-size: 17.5px; margin-bottom: 8px; }
+.approach-step p { color: var(--muted); font-size: 14px; }
 
-/* FOOTER */
-footer {
-  background: #0F2D43;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 32px 0;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
+/* ---------- survey-tool ---------- */
+.product-panel {
+  background: var(--navy); border-radius: 16px; padding: 56px;
+  display: flex; gap: 56px; align-items: center; color: var(--white);
 }
+.product-text { flex: 1.3; }
+.product-panel .section-eyebrow { color: var(--green-light); }
+.product-panel h2 { color: var(--white); font-weight: 700; font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 14px; }
+.product-panel p { color: #B9C1CC; max-width: 32em; }
+.chiprow { display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0 28px; }
+.chip {
+  border: 1px solid #3D4757; border-radius: 7px; padding: 8px 13px;
+  font-size: 13px; color: #DDE2E9; background: var(--navy-dark);
+}
+.chip b { color: var(--green-light); font-weight: 600; }
+.product-art { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.mini {
+  background: var(--navy-dark); border: 1px solid #3D4757; border-radius: 10px;
+  padding: 15px 18px; display: flex; justify-content: space-between; gap: 16px; font-size: 13.5px; color: #B9C1CC;
+}
+.mini span:last-child { color: var(--white); font-weight: 500; text-align: right; }
 
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
+/* ---------- over ---------- */
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+.about-text p { color: var(--muted); margin-bottom: 16px; }
+.about-text strong { color: var(--text); }
 
-footer .logo {
-  color: white;
-  font-size: 18px;
-}
+/* ---------- contact ---------- */
+.contact { text-align: center; }
+.contact h2 { font-weight: 700; font-size: clamp(26px, 2.8vw, 36px); margin-bottom: 14px; }
+.contact h2 .accent { color: var(--green); }
+.contact .lead { color: var(--muted); max-width: 36em; margin: 0 auto 30px; }
+.contact-meta { color: var(--muted); font-size: 13.5px; margin-top: 18px; }
 
-/* RESPONSIVE */
-@media (max-width: 980px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-  .hero-visual { max-width: 360px; margin: 0 auto; }
-  .segments-grid { grid-template-columns: repeat(2, 1fr); }
-  .blocks-grid { grid-template-columns: repeat(2, 1fr); }
-  .approach-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-grid { grid-template-columns: 1fr; gap: 32px; }
-}
+/* ---------- footer ---------- */
+footer { background: var(--navy); color: #B9C1CC; padding: 44px 0; }
+footer .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+footer img { height: 34px; width: auto; display: block; }
+footer div { font-size: 13.5px; }
 
-@media (max-width: 640px) {
-  .container { padding: 0 20px; }
-  nav ul { display: none; }
-  .hero { padding: 60px 0 70px; }
-  section { padding: 70px 0; }
-  .segments-grid, .blocks-grid { grid-template-columns: 1fr; }
-  .blocks-grid { border-radius: 14px; }
-  .contact { padding: 80px 0; }
-  .cta-group { flex-direction: column; align-items: stretch; }
-  .btn { justify-content: center; }
+/* ---------- responsive & toegankelijkheid ---------- */
+@media (max-width: 880px) {
+  .hero-grid, .product-panel, .about-grid { flex-direction: column; display: flex; align-items: flex-start; }
+  .hero { padding: 60px 0; }
+  header nav { display: none; }
+  .hero-visual { order: -1; }
+  .hero-visual img { width: 140px; }
+  .product-panel { padding: 34px 26px; }
+  section { padding: 64px 0; }
 }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { *, html { transition: none !important; scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
 <header>
   <div class="container">
-    <a href="/" class="logo" aria-label="Total IoT homepage">
+    <a href="/" class="logo-link" aria-label="Total IoT — home">
       <img src="/logo.png" alt="Total IoT" class="logo-img">
     </a>
     <div class="header-right">
@@ -671,7 +237,7 @@ footer .logo {
       </nav>
       <a class="nav-cta" href="https://survey.totaliot.nl" target="_blank" rel="noopener">
         Site survey-tool
-        <svg class="arrow" width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
     </div>
   </div>
@@ -683,6 +249,7 @@ footer .logo {
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
+        <div class="payoff">Trusted IoT Infrastructure</div>
         <h1>De juiste IoT-oplossing, <span class="accent">op maat samengesteld</span>.</h1>
         <p class="lead">
           Total IoT helpt organisaties van advies tot realisatie. Sensoren, connectiviteit, data-ontsluiting en visualisatie — als bouwblokken voor de oplossing die past bij jouw vraagstuk.
@@ -690,15 +257,13 @@ footer .logo {
         <div class="cta-group">
           <a href="#contact" class="btn btn-primary">
             Plan een vrijblijvend gesprek
-            <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
           </a>
           <a href="#segmenten" class="btn btn-secondary">Bekijk segmenten</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-logo-card">
-          <img src="/logo.png" alt="Total IoT — Complete IoT Solutions">
-        </div>
+        <img src="/beeldmerk.png" alt="" aria-hidden="true">
       </div>
     </div>
   </div>
@@ -838,19 +403,19 @@ footer .logo {
     <div class="approach-grid">
 
       <div class="approach-step">
-        <div class="approach-num">01</div>
+        <div class="approach-num">01 — Technisch</div>
         <h3>Technisch advies</h3>
         <p>Welke sensoren, welke connectiviteit, welke architectuur? Onafhankelijk advies zonder gebonden te zijn aan één merk of platform — gebaseerd op wat in de praktijk werkt.</p>
       </div>
 
       <div class="approach-step">
-        <div class="approach-num">02</div>
+        <div class="approach-num">02 — Lifecycle</div>
         <h3>Product &amp; lifecycle</h3>
         <p>Een sensor is geen eenmalige aankoop. Batterijlevensduur, firmware-updates, vervangcycli en supportkanalen tellen mee — over vijf jaar, niet over vijf weken.</p>
       </div>
 
       <div class="approach-step">
-        <div class="approach-num">03</div>
+        <div class="approach-num">03 — Zakelijk</div>
         <h3>Business case</h3>
         <p>Wat kost het, wat levert het op, en wanneer is het terugverdiend? Een eerlijke rekensom voordat er sensoren besteld worden — en bijgesteld terwijl het project loopt.</p>
       </div>
@@ -859,7 +424,31 @@ footer .logo {
   </div>
 </section>
 
-<section id="over">
+<section id="survey">
+  <div class="container">
+    <div class="product-panel">
+      <div class="product-text">
+        <span class="section-eyebrow">Product · LoRaWAN Site Survey</span>
+        <h2>Meten, plotten en rapporteren in één tool.</h2>
+        <p>Ons eigen survey-platform voor LoRaWAN-dekking: elke meting van de field tester verschijnt
+        live op de kaart of plattegrond — en het klantrapport staat met één klik klaar.</p>
+        <div class="chiprow" aria-hidden="true">
+          <span class="chip"><b>RSSI</b> −87 dBm</span>
+          <span class="chip"><b>SNR</b> 9.5 dB</span>
+          <span class="chip"><b>SF</b> 7</span>
+        </div>
+        <a href="https://survey.totaliot.nl" target="_blank" rel="noopener" class="btn btn-primary">Bekijk de survey-tool</a>
+      </div>
+      <div class="product-art" aria-hidden="true">
+        <div class="mini"><span>Meten</span><span>Live via de field tester</span></div>
+        <div class="mini"><span>Plotten</span><span>Kaart of plattegrond</span></div>
+        <div class="mini"><span>Rapporteren</span><span>PDF in één klik</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="over">
   <div class="container">
     <div class="about-grid">
       <div>
@@ -889,7 +478,7 @@ footer .logo {
     </p>
     <a href="mailto:info@totaliot.nl" class="btn btn-primary">
       info@totaliot.nl
-      <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
     </a>
     <p class="contact-meta">Of bel direct — gegevens op aanvraag.</p>
   </div>
@@ -899,8 +488,10 @@ footer .logo {
 
 <footer>
   <div class="container">
-    <a href="/" class="logo">Total IoT<span class="logo-dot" aria-hidden="true"></span></a>
-    <div>© 2026 Total IoT · IoT-oplossingen op maat · Nederland</div>
+    <a href="/" aria-label="Total IoT — home">
+      <img src="/logo-wit.png" alt="Total IoT">
+    </a>
+    <div>© 2026 Total IoT · Trusted IoT Infrastructure · Nederland</div>
   </div>
 </footer>
 
