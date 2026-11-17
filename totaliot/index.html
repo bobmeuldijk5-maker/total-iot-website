@@ -14,6 +14,9 @@
 <meta property="og:image" content="https://totaliot.nl/logo.png">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://totaliot.nl/">
+<link rel="alternate" hreflang="nl" href="https://totaliot.nl/">
+<link rel="alternate" hreflang="en" href="https://totaliot.nl/en/">
+<link rel="alternate" hreflang="x-default" href="https://totaliot.nl/">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
 <link rel="apple-touch-icon" href="/beeldmerk.png">
@@ -91,6 +94,13 @@ header nav a:hover { color: var(--green); }
   transition: background .18s ease, color .18s ease;
 }
 .nav-cta:hover { background: var(--green); color: var(--white); }
+.lang-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; flex-shrink: 0; }
+.lang-switch a {
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: .04em;
+  color: var(--muted); text-decoration: none; padding: 6px 10px; transition: background .18s ease, color .18s ease;
+}
+.lang-switch a:hover { color: var(--navy); }
+.lang-switch a[aria-current="true"] { background: var(--navy); color: var(--white); }
 
 /* ---------- knoppen ---------- */
 .btn {
@@ -209,6 +219,15 @@ footer div { font-size: 13.5px; }
   .hero-grid, .product-panel, .about-grid { flex-direction: column; display: flex; align-items: flex-start; }
   .hero { padding: 60px 0; }
   header nav { display: none; }
+  .header-right { gap: 12px; }
+  .nav-cta { padding: 8px 11px; font-size: 13px; white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .container { padding: 0 20px; }
+  header .container { gap: 10px; }
+  .logo-img { height: 34px; }
+  .header-right { gap: 10px; }
+  .nav-cta svg { display: none; }
   .hero-visual { order: -1; }
   .hero-visual img { width: 140px; }
   .product-panel { padding: 34px 26px; }
@@ -240,6 +259,9 @@ footer div { font-size: 13.5px; }
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="lang-switch" role="navigation" aria-label="Taal / Language">
+        <a href="/" hreflang="nl" lang="nl" aria-current="true">NL</a><a href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
       <a class="nav-cta" href="https://survey.totaliot.nl" target="_blank" rel="noopener">
         Site survey-tool
         <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
