@@ -1,0 +1,8 @@
+{
+  // Total IoT website: statische site, alles in de map totaliot/
+  "name": "total-iot-website",
+  "compatibility_date": "2026-01-01",
+  "assets": {
+    "directory": "./totaliot"
+  }
+}
